@@ -18,8 +18,11 @@ functions
 resources
 output
 
+sku -> stock-keeping unit 
 
 
+
+## azure CLI commands
 * az account list-locations
 * az configure --defaults <group={group}> <location={location}>
 * az group create --name <name> --location "<loc>"
