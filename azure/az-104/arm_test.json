@@ -2,17 +2,12 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-	  "storageAccountType": {
+	  "storageName" :{
 		  "type": "String",
-		  "defaultValue": "Standard_LRS",
-		  "allowedValues": [
-			  "Standard_LRS",
-			  "Standard_GRS",
-			  "Standard_ZRS",
-			  "Premium_LRS"
-		  ],
+		  "minLength": 3,
+		  "maxLength": 24,
 		  "metadata": {
-			  "description": "Storage Account Type"
+			  "description": "name of the azure storage resource"
 		  }
 	  }
   },
@@ -22,21 +17,16 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2025-01-01",
-      "name": "bushido5storage101",
+      "name": "[parameters('storageName')]",
+	  "tags": {
+		  "displayName": "[parameters('storageName')]"
+	  },
       "location": "[resourceGroup().location]",
       "sku": {
-        "name": "[parameters('storageAccountType')]"
+        "name": "Standart_LRS"
       },
-      "kind": "StorageV2",
-	  "properties": {
-		  "supportsHttpsTrafficOnly": true
-	  }
+      "kind": "StorageV2"
     }
   ],
-  "outputs": {
-	  "storageEndpoint": {
-		  "type": "object",
-		  "value": "[reference('bushido5storage101').primaryEndpoints]"
-	  }
-  }
+  "outputs": {}
 }
