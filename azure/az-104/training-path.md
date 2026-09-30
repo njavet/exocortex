@@ -1,9 +1,9 @@
 
 
-## introduction
+# prerequisites for azure admins
 * IaS: json, biceps, ARM templates
 
-### ARM templates
+## ARM templates
 * idem potent
 * declarative
 * tries to create resources in parallel
@@ -28,3 +28,5 @@ sku -> stock-keeping unit
 * az group create --name <name> --location "<loc>"
 * az deployment group create
 
+
+# manage identities and governance in azure
