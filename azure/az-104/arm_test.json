@@ -23,15 +23,20 @@
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2025-01-01",
       "name": "bushido5storage101",
-      "tags": {
-        "displayName": "bushido5storage101"
-      },
       "location": "[resourceGroup().location]",
-      "kind": "StorageV2",
       "sku": {
-        "name": "Standard_LRS"
-      }
+        "name": "[parameters('storageAccountType')]"
+      },
+      "kind": "StorageV2",
+	  "properties": {
+		  "supportsHttpsTrafficOnly": true
+	  }
     }
   ],
-  "outputs": {}
+  "outputs": {
+	  "storageEndpoint": {
+		  "type": "object",
+		  "value": "[reference('bushido5storage101').primaryEndpoints]"
+	  }
+  }
 }
