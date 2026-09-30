@@ -21,6 +21,7 @@ output
 
 
 * az account list-locations
+* az configure --defaults <group={group}> <location={location}>
 * az group create --name <name> --location "<loc>"
 * az deployment group create
 
