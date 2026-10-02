@@ -30,3 +30,7 @@ sku -> stock-keeping unit
 
 
 # manage identities and governance in azure
+* microsoft entra ID part of PaaS directory service
+* identity solution, 80/443
+* multitenant directory service
+* users / groups -> flat structure
