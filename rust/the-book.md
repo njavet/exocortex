@@ -49,6 +49,7 @@ ownership model automatically frees memory when out of scope. it calls the funct
 `drop`
 
 * rust's move ~ shallow copy with invalidating original variable
+* borrowing -> create a reference to a variable
 
 ---
 ## chap05

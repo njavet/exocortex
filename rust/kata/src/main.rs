@@ -1,16 +1,11 @@
 mod guess;
 mod rok;
 
-fn append_zero(s: &String) -> String {
-    let mut ns = String::from(s);
-    ns.push_str("-zero");
-    ns
-}
 
 fn main() {
-    let s = String::from("one");
-    let ns = append_zero(&s);
-    println!("old string: {}", s);
-    println!("new string: {}", ns);
-    rok::base::stack_move();
+    let s = String::from("this is a statement.");
+    let word = rok::base::first_word_0(&s);
+    println!("first word: {}", word);
+    let word = rok::base::first_word_1(&s);
+    println!("first word: {}", word);
 }

@@ -15,3 +15,17 @@ pub fn heap_move() {
     println!("s0 not valid anymore...");
     println!("new string: {}", s1);
 }
+
+pub fn first_word_0(s: &String) -> String {
+    let words: Vec<&str> = s.split(' ').collect();
+    words[0].to_string()
+}
+
+pub fn first_word_1(s: &String) -> &str {
+    for (index, &items) in s.as_bytes().iter().enumerate() {
+        if items == b' ' {
+            return &s[..index];
+        }
+    }
+    s
+}
