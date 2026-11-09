@@ -1,7 +1,7 @@
 use std::io;
 use rand::prelude::*;
 
-fn main() {
+pub fn guessing_game() {
     let secret_number = rand::rng().random_range(1..=101);
     println!("guess the number!");
 
