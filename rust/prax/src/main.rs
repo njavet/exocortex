@@ -1,8 +1,16 @@
 use std::io;
-
+use rand::prelude::*;
 
 fn main() {
-    let mut input = String::new();
-    io::stdin().read_line(&mut input).expect("Failed to read line");
-    println!("{}", input);
+    println!("guess the number!");
+    let secret_number = rand::rng().random_range(1..=101);
+    let mut guess = String::new();
+    io::stdin().read_line(&mut guess).expect("Failed to read line");
+    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+
+    match guess.cmp(&secret_number) {
+        std::cmp::Ordering::Less => println!("Too small!"),
+        std::cmp::Ordering::Greater => println!("Too big!"),
+        std::cmp::Ordering::Equal => println!("You win!"),
+    }
 }
