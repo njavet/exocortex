@@ -1,4 +1,31 @@
-### ch11
+## The Rust Book
+
+### chap02
+read line to string variable:
+
+rust:
+```
+use std::io;
+
+fn main() { 
+    let mut inp = String::new();
+    io::stdin().read_line(&mut inp).expect("failed to read line");
+    println!("input: {}", inp);
+}
+
+```
+python:
+```
+def main():
+    inp = input()
+    print("input", inp)
+```
+
+### chap03
+#### datatypes
+* scalar: integer, float, boolean, character
+
+* integer type range: -(2**(n-1)) to (2**(n-1)-1)
 
 ```
 #[cft(test)]
@@ -23,8 +50,7 @@ mod tests {
 ```
 `cargo test`
 
-
-### chapter07
+### chap07
 workspace -> packages -> crates -> modules -> files
 
 #### crates
@@ -37,8 +63,3 @@ workspace -> packages -> crates -> modules -> files
 * contains Cargo.toml
 * can contain many binary crates, but only one library crate (why not the opposite ? )
 * must contain at least one crate
-
-
-
-
-
