@@ -15,3 +15,5 @@
 * std -> stack, String -> heap ? 
 
 * let &s = String::from("text"); -> why &s[0..5] ? ref and value ? syntactic sugar ? 
+
+* staticmethods in rust ?  -> associated functions without self
