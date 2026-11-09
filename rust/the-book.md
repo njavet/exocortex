@@ -30,6 +30,25 @@ def main():
 
 ---
 ## chap04
+### memory management
+* manual (C/C++)
+* garbage collection (python, java, javascript)
+* ownership (rust)
+
+manual memory management requires alloc / free pairs. problems:
+* memory waste if not freed
+* leak if freed too early
+* double free if freed twice
+ 
+GC keeps track of each memory allocation on the heap. it regularly scans for 
+no longer used variables and frees them. problems:
+* performance
+* predictability 
+
+ownership model automatically frees memory when out of scope. it calls the function
+`drop`
+
+* rust's move ~ shallow copy with invalidating original variable
 
 ---
 ## chap05
@@ -85,3 +104,8 @@ mod tests {
 }
 ```
 `cargo test`
+
+---
+## chap12
+
+

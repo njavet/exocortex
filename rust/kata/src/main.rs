@@ -1,4 +1,5 @@
 mod guess;
+mod rok;
 
 fn append_zero(s: &String) -> String {
     let mut ns = String::from(s);
@@ -11,4 +12,5 @@ fn main() {
     let ns = append_zero(&s);
     println!("old string: {}", s);
     println!("new string: {}", ns);
+    rok::base::stack_move();
 }

@@ -8,3 +8,7 @@
 
 * let guess ..., shadow let guess: i32 -> python with mypy doesn't allow it
 
+* what is a "value" -> each value has an owner. variable ? 
+
+* trait ~ python protocol ? 
+
